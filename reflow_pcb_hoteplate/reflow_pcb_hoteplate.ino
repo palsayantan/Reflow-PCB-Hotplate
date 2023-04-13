@@ -534,7 +534,7 @@ void tempFunc() {
     // Deadband
     PID_value = constrain(PID_value, 0, 255);
 
-    analogWrite(heater, PID_value);
+    analogWrite(heater, (int)PID_value);
 
     Serial.print(setPoint);
     Serial.print(",");
